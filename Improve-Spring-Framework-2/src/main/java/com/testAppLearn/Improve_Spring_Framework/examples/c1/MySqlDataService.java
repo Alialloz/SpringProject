@@ -1,5 +1,8 @@
 package com.testAppLearn.Improve_Spring_Framework.examples.c1;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MySqlDataService implements DataService {
 
     @Override
