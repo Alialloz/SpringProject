@@ -1,5 +1,6 @@
 package com.codally.springboot.learn_jpa_and_hibernate.course.jdbc;
 
+import com.codally.springboot.learn_jpa_and_hibernate.course.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -17,7 +18,7 @@ public class CourseJdbcRepository {
             values(1,'Learn AWS','Codally');
             """;
 
-    public void insert(){
+    public void insert(Course course){
         springJdbcTemplate.update(INSERT_QUERY);
     }
 }
