@@ -1,0 +1,9 @@
+jdbc:h2:mem:testdb
+
+insert into course (id,name,author)
+values(1,'Learn AWS','Codally');
+
+
+select * from course
+
+delete from course where id=1
