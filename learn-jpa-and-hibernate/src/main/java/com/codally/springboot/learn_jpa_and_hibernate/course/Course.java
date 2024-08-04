@@ -1,6 +1,13 @@
 package com.codally.springboot.learn_jpa_and_hibernate.course;
 
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
     private long id;
     private String name;
     private String author;
@@ -10,6 +17,10 @@ public class Course {
         this.id = id;
         this.name = name;
         this.author = author;
+    }
+
+    public Course() {
+
     }
 
     //Getters
@@ -32,6 +43,11 @@ public class Course {
     }
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return "Course [id=" + id + ", name=" + name + ", author=" + author + "]";
     }
 
 
