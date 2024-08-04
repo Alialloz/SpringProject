@@ -16,6 +16,9 @@ public class RealWorldContextApp {
                     new AnnotationConfigApplicationContext(RealWorldContextApp.class)) {
 
             Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+
+            System.out.println(context.getBean(BusinessCalculationService.class).findMax());
+
         }
     }
 }

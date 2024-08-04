@@ -1,8 +1,10 @@
 package com.testAppLearn.Improve_Spring_Framework.examples.c1;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class MongoDbDataService implements DataService {
 
     @Override
